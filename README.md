@@ -10,18 +10,15 @@ HestiaPi Touch is compatible with many devices and home automation systems and c
 
 # What are all these files?
 
-TL;DR: Download HestiaPi-ONE-Base-v2.1_FreeCAD.3mf and HestiaPi-ONE-Cover-v2.1_FreeCAD.3mf, adjust printer/filament settings, and print.
+TL;DR: Download BaseOneSnap2HNuts_v2.1.FCStd and CoverOneSnap2H-taller.stl, adjust printer/filament settings, and print.
 
 ## File types
 
 - FCStd: FreeCAD models of the case
 - stl: Exported models in a standard format (STL)
-- 3mf: 3D Manufacturing Format files that can be used with slicer software
 
 ## The process
 The process is to use FreeCAD to model the objects, then export to STL. After that, open a slicer like Cura, open the STL and set all your print settings (temperature, infill, supports, and so forth).
-
-If you just want to print, you will only need the 3mf file. That has the models and all of the printer settings in one file.
 
 After that you'll either press Print via USB or save the .gcode to an SD card and put it in your printer to print in standalone mode. If this is your first time printing something, I'd advise having someone experienced in 3D printing to help you along the process.
 
