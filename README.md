@@ -10,29 +10,34 @@ HestiaPi Touch is compatible with many devices and home automation systems and c
 
 # What are all these files?
 
-TL;DR: Download BaseOneSnap2HNuts_v2.1.FCStd and CoverOneSnap2H-taller.stl, adjust printer/filament settings, and print.
+TL;DR: Download Backplate_ONE.stl and the Cover_ONE stl which matches the power supply you have, adjust printer/filament settings, and print.
 
 ## File types
 
 - FCStd: FreeCAD models of the case
 - stl: Exported models in a standard format (STL)
 
-## The process
-The process is to use FreeCAD to model the objects, then export to STL. After that, open a slicer like Cura, open the STL and set all your print settings (temperature, infill, supports, and so forth).
+## The printing process
+Open a slicer like Cura or Prussa, open the STL and set all your print settings (temperature, infill, supports, and so forth).
 
 After that you'll either press Print via USB or save the .gcode to an SD card and put it in your printer to print in standalone mode. If this is your first time printing something, I'd advise having someone experienced in 3D printing to help you along the process.
 
 ## Different editions
-For the most part, the different editions are just slightly different case designs that have evolved over time. You will only need two parts: the base and the cover.
+The US power supply (24V) is larger than the EU one and so the LCD screen rests directly on the power supply. As such, one of the LCD tabs had to be removed in order to avoid it from colliding with the airspace of the power supply.
 
-All of the models must have matching base and covers. The attachment mechanisms and tolerances have changed from one version to the next, so be sure to get a matched pair.
+The EU power supply (240V) is smaller and requires that third tab be there in order to keep the LCD in place.
 
-- CoverOneSnap2H_v2.1: The newest model, a reproduction of the one of the same name, but it is easier to modify and now sports a version number
-  - CoverOneSnap2H_v2.1-Clicky-US-24V: Modified to omit a tab that collides with the power converter
-- CoverOneSnap2H: The model that shipped with the crowdfunding campaign and for many years afterwards. If the same electronics components were still available as were used in 2019, we'd probably still be using this model.
-- All the rest: Old models that you likely do not want
+# Update process
+The process to update these models is to use FreeCAD to modify the model and make sure to update the version number. When done, export to STL. Commit all of these files to the git repo with an explanation of what changed in the commit message. Submit a merge request.
 
-The list above are just the covers. The base is the same filename except Cover is replaced with Base.
+As long as the modified design will still fit with the other piece (e.g. your modified cover still fits the current backplate), the version number should go up by 0.01. If you are introducing an incompatibility, the version number should go up by 0.1. The only time the version number would change more than this if if it is a radical redesign.
+
+# Compatibility
+The current models (made in FreeCAD) are not a perfect match with the old ones (made in Onshape). The Onshape models never had a version number. The FreeCAD models got version numbers in 2025. Version numbers are engraved on the inside of the cover and the back of the backplate.
+
+Anything with a version number where the first two digits match will be compatible. For example, the EU Cover v2.1 is compatible with the Backplate v2.11.
+
+If you need a replacement and are not sure which model you have, the safest thing to do is to print a new backplate and cover with a known version number. Of course, you can also print out just the piece that you need and just see if it fits.
 
 # Useful links
 
